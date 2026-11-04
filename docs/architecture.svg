@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 220" role="img" aria-label="Agent company architecture showing owner, approval-gated orchestration, specialists, model, and audit store">
+ <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1929"/><stop offset="1" stop-color="#15233c"/></linearGradient><linearGradient id="a"><stop stop-color="#75dfd7"/><stop offset="1" stop-color="#9da0ff"/></linearGradient><style>text{font-family:ui-sans-serif,system-ui,sans-serif;fill:#e9f1fb}.sub{fill:#90a9bf;font-size:13px}.title{font-size:17px;font-weight:bold}.path{stroke:#64c9c4;stroke-dasharray:6 6;animation:move 3s linear infinite}.box{fill:#15283d;stroke:#35516a;stroke-width:2}@keyframes move{to{stroke-dashoffset:-48}}</style></defs>
+ <rect width="1040" height="220" rx="18" fill="url(#bg)"/>
+ <path class="path" d="M198 110H257M453 110H507M700 110H750M887 110H925" fill="none" stroke-width="3"/>
+ <rect class="box" x="26" y="56" width="172" height="110" rx="15"/><text class="title" x="112" y="94" text-anchor="middle">Human Owner</text><text class="sub" x="112" y="121" text-anchor="middle">Goals &amp; decisions</text>
+ <rect class="box" x="257" y="56" width="196" height="110" rx="15"/><text class="title" x="355" y="94" text-anchor="middle">CEO Planner</text><text class="sub" x="355" y="120" text-anchor="middle">Approval gate</text>
+ <rect class="box" x="507" y="56" width="193" height="110" rx="15"/><text class="title" x="603" y="94" text-anchor="middle">Specialist Agents</text><text class="sub" x="603" y="120" text-anchor="middle">Scoped text delivery</text>
+ <rect class="box" x="750" y="56" width="137" height="110" rx="15"/><text class="title" x="819" y="94" text-anchor="middle">AI Model</text><text class="sub" x="819" y="120" text-anchor="middle">Provider API</text>
+ <rect x="926" y="56" width="88" height="110" rx="15" fill="#173b3c" stroke="#457f7b" stroke-width="2"/><text x="970" y="98" text-anchor="middle" style="font-size:14px;font-weight:bold">SQLite</text><text class="sub" x="970" y="120" text-anchor="middle">Audit</text>
+ <text x="520" y="197" fill="#85b9bf" text-anchor="middle" class="sub">Plan approval and per-task initiation are mandatory · No silent publishing or code execution</text>
+</svg>

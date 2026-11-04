@@ -1,0 +1,29 @@
+services:
+  control:
+    build: .
+    image: agentcompany-control:local
+    restart: unless-stopped
+    ports:
+      # Loopback binding is safest. Use a TLS reverse proxy for public access.
+      - "127.0.0.1:8787:8787"
+    environment:
+      APP_HOST: 0.0.0.0
+      APP_PORT: 8787
+      APP_DB: /app/data/agentcompany.sqlite3
+      AI_API_KEY: ${AI_API_KEY:-}
+      AI_BASE_URL: ${AI_BASE_URL:-https://api.openai.com/v1}
+      AI_MODEL: ${AI_MODEL:-gpt-4.1-mini}
+      AI_INPUT_PER_MILLION_USD: ${AI_INPUT_PER_MILLION_USD:-0.40}
+      AI_OUTPUT_PER_MILLION_USD: ${AI_OUTPUT_PER_MILLION_USD:-1.60}
+      DEFAULT_MONTHLY_BUDGET_USD: ${DEFAULT_MONTHLY_BUDGET_USD:-10}
+    volumes:
+      - company_data:/app/data
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+volumes:
+  company_data:

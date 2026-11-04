@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#09111d"/>
+<title>SPYDR by Falvorn AI — AI CEO Command Center</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="/styles.css" />
+</head><body>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<div class="shell" id="shell">
+ <aside class="sidebar" aria-label="Main navigation">
+  <div class="brand" aria-label="SPYDR by Falvorn AI"><div class="brand-mark"><span>✳</span></div><div><strong>SPYDR<span class="accent">.AI</span></strong><small>BY FALVORN AI</small></div></div>
+  <div class="workspace-head"><div class="workspace-symbol" id="workspace-monogram">A</div><div class="workspace-label"><span>WORKSPACE</span><strong id="workspace-name">Your company</strong></div><div class="small-chevron">⌄</div></div>
+  <div class="sidebar-section-label">OPERATIONS</div>
+  <nav id="nav" class="navigation">
+   <button class="nav-link active" data-view="overview"><span class="nav-icon">▦</span><span>Overview</span></button>
+   <button class="nav-link" data-view="goals"><span class="nav-icon">◎</span><span>Goals & tasks</span></button>
+   <button class="nav-link" data-view="agents"><span class="nav-icon">◇</span><span>Agent workforce</span></button>
+   <button class="nav-link" data-view="approvals"><span class="nav-icon">☑</span><span>Approvals</span><span class="nav-count" id="approval-count" hidden>0</span></button>
+   <button class="nav-link" data-view="activity"><span class="nav-icon">≋</span><span>Activity log</span></button>
+  </nav>
+  <div class="sidebar-section-label tools-title">SYSTEM</div>
+  <nav class="navigation"><button class="nav-link" data-view="settings"><span class="nav-icon">⚙</span><span>Settings & budget</span></button></nav>
+  <div class="sidebar-spacer"></div>
+  <div class="side-guide"><span class="side-guide-icon">✦</span><div><strong>Human in control</strong><p>Every strategy requires your approval before agents can execute.</p></div></div>
+  <div class="sidebar-footer"><div class="avatar">O</div><div><strong>Workspace owner</strong><small id="owner-email">Authenticated account</small></div><button id="logout" class="icon-button" title="Sign out" aria-label="Sign out">↪</button></div>
+ </aside>
+ <section class="main-panel">
+  <header class="topbar"><div class="breadcrumb"><span>Workspace</span><span class="crumb-divider">/</span><strong id="view-label">Overview</strong></div><div class="top-actions"><span class="live-indicator"><i></i> SYSTEM ONLINE</span><button id="refresh" class="icon-button refresh" aria-label="Refresh dashboard">↻</button><button id="new-goal-top" class="primary small">＋ New goal</button></div></header>
+  <div class="page-body" id="content"><div class="loading"><span class="spinner"></span> Connecting to workspace...</div></div>
+  <footer class="page-footer"><span>SPYDR by Falvorn AI · Local-first orchestration</span><span>All runs require human initiation · AI output is reviewed as text</span></footer>
+ </section>
+</div>
+<div id="auth" class="auth-scrim" hidden><div class="auth-card"><div class="auth-sigil">✳</div><div class="eyebrow" id="auth-eyebrow">GET STARTED</div><h1 id="auth-title">Meet your AI CEO.</h1><p id="auth-subtitle">A secure command center for your virtual company.</p><form id="auth-form">
+<label>Email address<input name="email" type="email" autocomplete="username" required maxlength="180" placeholder="you@company.com"/></label>
+<label>Password<input name="password" type="password" autocomplete="new-password" required minlength="12" placeholder="At least 12 characters"/></label>
+<label id="company-field">Company name<input name="company" type="text" required maxlength="100" placeholder="Your company name"/></label>
+<div id="auth-error" role="alert" class="form-error" hidden></div><button class="primary full" type="submit" id="auth-submit">Create workspace</button>
+</form><p class="auth-footer">Private by default · No API keys stored in the browser</p></div></div>
+<dialog id="modal"><div class="modal-inside"><div class="modal-head"><div><div class="eyebrow" id="modal-kicker">WORKSPACE ACTION</div><h2 id="modal-title"></h2></div><button class="icon-button modal-close" aria-label="Close dialog" id="modal-close">✕</button></div><div class="modal-body" id="modal-body"></div></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script src="/app.js" type="module"></script>
+</body></html>
